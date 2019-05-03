@@ -1,0 +1,30 @@
+<title>Menu</title>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="sidenav">
+  <a href="#lunch">Lunch</a>
+  <a href="#dinner">Dinner</a>
+  <a href="#pizza">Pizzas</a>
+  <a href="#pasta">Pasta</a>
+  <a href="#kids">Kids Menu</a>
+  <a href="#desserts">Desserts</a>
+  <a href="#beverages">Beverages</a>
+
+</div>
+
+
+<div class="menu">
+    <img id="menuImg" src="/home/static/home/pics/ingredients.jpeg">
+        <h1 id="menuTitle" class="title">Lunch & Dinner</h1>
+    </img>
+    <h1 id="lunch" class="title">Lunch</h1>
+    {% include "home/menus/lunch.html" %}
+    <h1 id="dinner" style="margin-top:200px;"class="title">Dinner</h1>
+    {% include "home/menus/appetizers.html" %}
+    {% include "home/menus/pizzas.html" %}
+    {% include "home/menus/pastas.html" %}
+    {% include "home/menus/others.html" %}
+    {% include "home/menus/drinks.html" %}
+</div>
+{% endblock %}
